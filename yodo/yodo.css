@@ -1,0 +1,63 @@
+/* You Only Die Once: app theme on top of ../style.css, always dark like the app */
+@font-face {
+  font-family: Cinzel;
+  src: url(fonts/cinzel.ttf) format("truetype");
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --background: #0d0d0d;
+  --surface: #1a1a1a;
+  --outline: #444444;
+  --text: #e0e0e0;
+  --muted: #a0a0a0;
+  --accent: #e8d5a8;
+  --heading: #c8aa6e;
+}
+
+h1,
+h2 {
+  font-family: Cinzel, serif;
+  letter-spacing: 0.03em;
+}
+
+.hero {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero img {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  flex: none;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.badge img {
+  height: 56px;
+  width: auto;
+}
+
+.screenshots {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+}
+
+.screenshots img {
+  width: 200px;
+  height: auto;
+  flex: none;
+  scroll-snap-align: start;
+  border: 1px solid var(--outline);
+  border-radius: 12px;
+}
